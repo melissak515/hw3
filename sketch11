@@ -1,0 +1,29 @@
+
+int numberOfBars=20;
+int hue = 0;
+int count = 0;
+
+void setup() {
+  size(500,500);
+  noStroke();
+  background(0);
+  frameRate(10);
+  colorMode(HSB,100);
+}
+
+void draw() {
+  if (numberOfBars < width) {
+    fill(0); 
+    rect(numberOfBars,0,5,height);
+    fill(hue,100,100);
+    rect(numberOfBars,random(height),5,height);
+    numberOfBars += 40;
+    if (hue > 100) {
+      hue = 0;
+    }
+  } else {
+    numberOfBars = 20;
+  }
+  count++;
+  hue=hue+3;
+}
