@@ -16,6 +16,8 @@ class Ball {
   void draw() {
     fill(c);
     ellipse(x,y,radius*2,radius*2);
+    
+    println(c);
   }
 
   void step() {
